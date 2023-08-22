@@ -4,6 +4,10 @@
   código dentro de las funciones ya definidas. 
   No comentar la funcion 
 */
+var amigos = [
+  { nombre: "toni", edad: 33 },
+  { nombre: "Emi", edad: 25 },
+];
 function buscarAmigo(amigos, nombre) {
   // La funcion llamada 'buscarAmigo' recibe como argumento un array llamado 'amigos' que contiene
   // en cada posición del arreglo un objeto que tiene como propiedades 'nombre' y 'edad'. También
@@ -14,9 +18,9 @@ function buscarAmigo(amigos, nombre) {
   //  buscarAmigo(amigos, 'toni') debe devolver { nombre: 'toni', edad: 33 };
 
   // Tu código aca:
-  
+  console.log(amigos.filter((e) => e["nombre"] === nombre));
 }
-
+buscarAmigo(amigos, "Emi");
 // No modifiques nada debajo de esta linea //
 
-module.exports = buscarAmigo
+module.exports = buscarAmigo;
